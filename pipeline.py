@@ -32,7 +32,7 @@ def main() -> None:
 	)
 
 	comparison = compare_xml(original_xml, reconstructed_xml)
-	print(f"XML text identical: {comparison}")
+	print(f"XML equivalent after canonicalization: {comparison}")
 
 
 if __name__ == "__main__":

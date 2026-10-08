@@ -5,6 +5,7 @@ from xml.etree import ElementTree
 from src.json_to_toon import JsonToToonTransformer
 from src.toon_to_xml import ToonToXmlTransformer
 from src.xml_to_json import XmlToJsonTransformer
+from src.analysis import compare_xml
 
 
 def test_round_trip_preserves_interleaved_sibling_order() -> None:
@@ -24,3 +25,10 @@ def test_round_trip_preserves_interleaved_sibling_order() -> None:
 	assert [child.attrib for child in reconstructed_root] == [
 		child.attrib for child in original_root
 	]
+
+
+def test_xml_comparison_accepts_equivalent_line_break_entities() -> None:
+	original = '<item value="first&#xD;&#xA;second" />'
+	reconstructed = '<item value="first&#13;&#10;second" />'
+
+	assert compare_xml(original, reconstructed)
