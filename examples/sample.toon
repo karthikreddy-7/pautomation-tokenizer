@@ -1,1717 +1,2482 @@
-OpenSpanDesignDocument:
-  "@Version": 22.1.0.3
-  "@Serializer": "2.0"
-  "@Culture": fr-CA
-  ComponentInfo:
-    Type:
-      "@Value": OpenSpan.Automation.Automator
-    Assembly:
-      "@Value": OpenSpan.Automation
-    Dependencies:
-      Dependency[2]{"@Id","@IsUsed"}:
-        GlobalContainer-8DC7A556601B888,True
-        AutomationSet-8DC74F03E74FBD1,True
-    AssemblyReferences:
-      Assembly[6]{"@Value"}:
-        "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-        "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-        "OpenSpan, Version=22.1.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e"
-        "OpenSpan.Automation, Version=22.1.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e"
-        "OpenSpan.Controls, Version=22.1.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e"
-        "Pega.Controls, Version=22.1.0.0, Culture=neutral, PublicKeyToken=f5db91edc02d8c5e"
-    DynamicAssemblyReferences: null
-    FileReferences: null
-    BuildReferences: null
-    StartAtRuntime:
-      "@Value": False
-  Component:
-    "@Version": "1.0"
-    OpenSpan.Automation.Automator:
-      "@Name": GB_P_Shutdown
-      "@Id": Automator-8D71746ECDD2F90
-      AutomationDocument:
-        Name:
-          "@Value": ""
-        Size:
-          "@Value": "5005, 5000"
-        Objects:
-          ConnectionBlock[21]:
-            - ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\EntryPoint-8D71746EF2C24D4"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "40"
-              PartID:
-                "@Value": "1"
-              Collapsed:
-                "@Value": False
-            - "@type": OpenSpan.Automation.Design.ConnectionBlocks.MultiExitPointBlock
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746EFE5593C"
-              Left:
-                "@Value": "1000"
-              Top:
-                "@Value": "380"
-              PartID:
-                "@Value": "2"
-              Collapsed:
-                "@Value": False
-              Title:
-                "@Value": Success
-              EventName:
-                "@Value": ""
-            - "@type": OpenSpan.Automation.Design.ConnectionBlocks.MultiExitPointBlock
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746F09C7F6C"
-              Left:
-                "@Value": "1000"
-              Top:
-                "@Value": "640"
-              PartID:
-                "@Value": "3"
-              Collapsed:
-                "@Value": False
-              Title:
-                "@Value": Failure
-              EventName:
-                "@Value": ""
-            - ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\LabelHost-8D71746FCDFE942"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "380"
-              PartID:
-                "@Value": "4"
-              Collapsed:
-                "@Value": False
-            - DisplayName:
-                "@Value": Metric_LogProcessStart
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-              PartID:
-                "@Value": "5"
-              Left:
-                "@Value": "260"
-              Top:
-                "@Value": "40"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": RA_Common
-              Fittings:
-                _param1:
-                  "@Collapsed": False
-                  "@ActualText": Success
-              OverriddenIds: null
-            - "@type": OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock
-              DisplayName:
-                "@Value": Run
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-              PartID:
-                "@Value": "6"
-              Left:
-                "@Value": "220"
-              Top:
-                "@Value": "380"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": RAC_API_MF_LogProcessAction
-              Fittings:
-                _param4:
-                  "@Collapsed": False
-                  "@ActualText": Success
-              OverriddenIds: null
-            - "@type": OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock
-              DisplayName:
-                "@Value": Run
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-              PartID:
-                "@Value": "7"
-              Left:
-                "@Value": "220"
-              Top:
-                "@Value": "720"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": RAC_API_MF_LogProcessAction
-              Fittings:
-                _param4:
-                  "@Collapsed": False
-                  "@ActualText": Success
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717470BBE4B2B"
-              PartID:
-                "@Value": "8"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "440"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intActnStopID
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717470DA5656D"
-              PartID:
-                "@Value": "10"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "760"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intActnAutErrID
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174712BF4C6D"
-              PartID:
-                "@Value": "11"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "100"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intProcAppShtdwn
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Jump To Success
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\JumpHost-8D7174720A453AC"
-              PartID:
-                "@Value": "14"
-              Left:
-                "@Value": "900"
-              Top:
-                "@Value": "40"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": Jump To Success
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D71747456E1775"
-              PartID:
-                "@Value": "18"
-              Left:
-                "@Value": "560"
-              Top:
-                "@Value": "160"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": False
-              InstanceName:
-                "@Value": _intProdID
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174750195F7B"
-              PartID:
-                "@Value": "20"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "820"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": _intProdID
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D71747506B20C3"
-              PartID:
-                "@Value": "21"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "500"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": _intProdID
-              OverriddenIds: null
-            - ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-              Left:
-                "@Value": "40"
-              Top:
-                "@Value": "620"
-              PartID:
-                "@Value": "24"
-              Collapsed:
-                "@Value": False
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174784C2F0F2"
-              PartID:
-                "@Value": "33"
-              Left:
-                "@Value": "520"
-              Top:
-                "@Value": "440"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intProcRunID
-              OverriddenIds: null
-            - "@type": OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock
-              DisplayName:
-                "@Value": Run
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-              PartID:
-                "@Value": "34"
-              Left:
-                "@Value": "680"
-              Top:
-                "@Value": "380"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": RAC_API_MF_LogProcessAction
-              Fittings:
-                _param4:
-                  "@Collapsed": False
-                  "@ActualText": Success
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717478A0898B2"
-              PartID:
-                "@Value": "35"
-              Left:
-                "@Value": "520"
-              Top:
-                "@Value": "380"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intActnStopID
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717479650F296"
-              PartID:
-                "@Value": "37"
-              Left:
-                "@Value": "520"
-              Top:
-                "@Value": "720"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intActnStopID
-              OverriddenIds: null
-            - DisplayName:
-                "@Value": Properties
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174797FE190E"
-              PartID:
-                "@Value": "38"
-              Left:
-                "@Value": "520"
-              Top:
-                "@Value": "780"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": intProcRunID
-              OverriddenIds: null
-            - "@type": OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock
-              DisplayName:
-                "@Value": Run
-              ConnectableUniqueId:
-                "@Value": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-              PartID:
-                "@Value": "43"
-              Left:
-                "@Value": "680"
-              Top:
-                "@Value": "720"
-              Collapsed:
-                "@Value": False
-              WillExecute:
-                "@Value": True
-              InstanceName:
-                "@Value": RAC_API_MF_LogProcessAction
-              Fittings:
-                _param4:
-                  "@Collapsed": False
-                  "@ActualText": Success
-              OverriddenIds: null
-        Links:
-          Link[23]:
-            - "@PartID": "12"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "11"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174712BF4C6D"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D681F629CA71FF"
-              To:
-                "@PartID": "5"
-                "@PortName": _param3
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "225, 165"
-                  "235, 165"
-                  "244, 165"
-                  "244, 125"
-                  "260, 125"
-                  "270, 125"
-            - "@PartID": "13"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "1"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\EntryPoint-8D71746EF2C24D4"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\EntryPoint-8D71746EF2C24D4"
-              To:
-                "@PartID": "5"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "132, 62"
-                  "142, 62"
-                  "201, 62"
-                  "201, 85"
-                  "260, 85"
-                  "270, 85"
-            - "@PartID": "15"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "5"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-              To:
-                "@PartID": "14"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\JumpHost-8D7174720A453AC"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\JumpHost-8D7174720A453AC"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "525, 85"
-                  "535, 85"
-                  "717, 85"
-                  "717, 62"
-                  "900, 62"
-                  "910, 62"
-            - "@PartID": "17"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "4"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\LabelHost-8D71746FCDFE942"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\LabelHost-8D71746FCDFE942"
-              To:
-                "@PartID": "6"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "159, 402"
-                  "169, 402"
-                  "194, 402"
-                  "194, 425"
-                  "220, 425"
-                  "230, 425"
-            - "@PartID": "19"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "5"
-                "@PortName": Result
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174705CB7C97"
-              To:
-                "@PartID": "18"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D71747456E1775"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableVariable-8D71747455A4FC0"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "525, 281"
-                  "535, 281"
-                  "540, 281"
-                  "540, 225"
-                  "560, 225"
-                  "570, 225"
-            - "@PartID": "22"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "8"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717470BBE4B2B"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D680357B43C55B"
-              To:
-                "@PartID": "6"
-                "@PortName": _param2
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "191, 505"
-                  "201, 505"
-                  "212, 505"
-                  "212, 486"
-                  "220, 486"
-                  "230, 486"
-            - "@PartID": "23"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "21"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D71747506B20C3"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableVariable-8D71747455A4FC0"
-              To:
-                "@PartID": "6"
-                "@PortName": _param3
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-              LinkPoints:
-                Point[8]{"@value"}:
-                  "167, 565"
-                  "177, 565"
-                  "188, 565"
-                  "188, 565"
-                  "212, 565"
-                  "212, 506"
-                  "220, 506"
-                  "230, 506"
-            - "@PartID": "25"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "24"
-                "@PortName": _param1
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-                "@MemberComponentId": EMPTY
-              To:
-                "@PartID": "7"
-                "@PortName": _param1
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-              LinkPoints:
-                Point[8]{"@value"}:
-                  "159, 672"
-                  "169, 672"
-                  "172, 672"
-                  "172, 748"
-                  "36, 748"
-                  "36, 805"
-                  "220, 805"
-                  "230, 805"
-            - "@PartID": "26"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "10"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717470DA5656D"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D6811EE56CCD09"
-              To:
-                "@PartID": "7"
-                "@PortName": _param2
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "205, 825"
-                  "215, 825"
-                  "218, 825"
-                  "218, 826"
-                  "220, 826"
-                  "230, 826"
-            - "@PartID": "27"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "20"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174750195F7B"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableVariable-8D71747455A4FC0"
-              To:
-                "@PartID": "7"
-                "@PortName": _param3
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "167, 885"
-                  "177, 885"
-                  "188, 885"
-                  "188, 846"
-                  "220, 846"
-                  "230, 846"
-            - "@PartID": "28"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "24"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-              To:
-                "@PartID": "7"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "159, 642"
-                  "169, 642"
-                  "194, 642"
-                  "194, 765"
-                  "220, 765"
-                  "230, 765"
-            - "@PartID": "29"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "24"
-                "@PortName": _param1
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-                "@MemberComponentId": EMPTY
-              To:
-                "@PartID": "3"
-                "@PortName": param1
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746F09C7F6C"
-                "@MemberComponentId": EMPTY
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "159, 672"
-                  "169, 672"
-                  "584, 672"
-                  "584, 691"
-                  "999, 691"
-                  "1009, 691"
-            - "@PartID": "30"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "24"
-                "@PortName": _param2
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-                "@MemberComponentId": EMPTY
-              To:
-                "@PartID": "3"
-                "@PortName": param2
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746F09C7F6C"
-                "@MemberComponentId": EMPTY
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "159, 694"
-                  "169, 694"
-                  "584, 694"
-                  "584, 713"
-                  "999, 713"
-                  "1009, 713"
-            - "@PartID": "32"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "6"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D7174706FED323"
-              To:
-                "@PartID": "35"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717478A0898B2"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717478A0898B2"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "495, 425"
-                  "505, 425"
-                  "513, 425"
-                  "513, 425"
-                  "520, 425"
-                  "530, 425"
-            - "@PartID": "36"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "35"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717478A0898B2"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717478A0898B2"
-              To:
-                "@PartID": "34"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "671, 425"
-                  "681, 425"
-                  "681, 425"
-                  "680, 425"
-                  "680, 425"
-                  "690, 425"
-            - "@PartID": "39"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "35"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717478A0898B2"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D680357B43C55B"
-              To:
-                "@PartID": "34"
-                "@PortName": _param2
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "671, 445"
-                  "681, 445"
-                  "681, 465"
-                  "680, 465"
-                  "680, 486"
-                  "690, 486"
-            - "@PartID": "40"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "33"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174784C2F0F2"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D681E12C4AB245"
-              To:
-                "@PartID": "34"
-                "@PortName": _param3
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "667, 505"
-                  "677, 505"
-                  "678, 505"
-                  "678, 506"
-                  "680, 506"
-                  "690, 506"
-            - "@PartID": "41"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "34"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747860B74FA"
-              To:
-                "@PartID": "2"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746EFE5593C"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746EFE5593C"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "955, 425"
-                  "965, 425"
-                  "983, 425"
-                  "983, 401"
-                  "1000, 401"
-                  "1010, 401"
-            - "@PartID": "42"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "7"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D717470851D33D"
-              To:
-                "@PartID": "37"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717479650F296"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717479650F296"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "495, 765"
-                  "505, 765"
-                  "513, 765"
-                  "513, 765"
-                  "520, 765"
-                  "530, 765"
-            - "@PartID": "44"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "37"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717479650F296"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D680357B43C55B"
-              To:
-                "@PartID": "43"
-                "@PortName": _param2
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "671, 785"
-                  "681, 785"
-                  "681, 805"
-                  "680, 805"
-                  "680, 826"
-                  "690, 826"
-            - "@PartID": "45"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "38"
-                "@PortName": Value
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D7174797FE190E"
-                "@MemberComponentId": "GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D681E12C4AB245"
-              To:
-                "@PartID": "43"
-                "@PortName": _param3
-                "@PortType": Property
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "667, 845"
-                  "677, 845"
-                  "678, 845"
-                  "678, 846"
-                  "680, 846"
-                  "690, 846"
-            - "@PartID": "46"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "37"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717479650F296"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableProperties-8D717479650F296"
-              To:
-                "@PartID": "43"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "671, 765"
-                  "681, 765"
-                  "681, 765"
-                  "680, 765"
-                  "680, 765"
-                  "690, 765"
-            - "@PartID": "47"
-              "@Sensitive": False
-              "@Asynchronous": False
-              "@LogBeforeExecution": ""
-              "@LogAfterExecution": ""
-              From:
-                "@PartID": "43"
-                "@PortName": Complete
-                "@PortType": Event
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ConnectableMethod-8D71747A7BF6FEC"
-              To:
-                "@PartID": "3"
-                "@PortName": DoWork
-                "@PortType": Method
-                "@ConnectableId": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746F09C7F6C"
-                "@MemberComponentId": "Automator-8D71746ECDD2F90\\ExitPoint-8D71746F09C7F6C"
-              LinkPoints:
-                Point[6]{"@value"}:
-                  "955, 765"
-                  "965, 765"
-                  "983, 765"
-                  "983, 661"
-                  "1000, 661"
-                  "1010, 661"
-        Comments:
-          Comment:
-            "@Text": "Currently there is nothing happening in the application shutdown,\r\nthis makes sense given the robot's RPA-like nature..."
-            "@PartID": "16"
-            "@Position": "616, 98"
-            "@UnanchoredOffset": "-30, -30"
-            "@BaseWidth": "30"
-        SubGraphs: null
-      Content:
-        "@Name": DynamicMembers
-        Items:
-          OpenSpan.DynamicMembers.DynamicMethodInfo:
-            "@dynamicType": Method
-            "@name": _EntryPointExecute
-            "@aliasName": Run
-            "@visibility": DefaultOn
-            "@source": ""
-            "@blockTypeName": OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock
-            "@returnType": System.Void
-            param[2]{"@name","@aliasName","@paramType","@isIn","@isOut","@position"}:
-              param1,ErrCode,System.String,False,True,"0"
-              param2,ErrDetail,System.String,False,True,"1"
-    OpenSpan.Automation.EntryPoint:
-      "@Name": entryPoint1
-      "@Id": EntryPoint-8D71746EF2C24D4
-      AliasName:
-        "@Value": Run
-      ComponentName:
-        "@Value": Run
-      DisplayName:
-        "@Value": Run
-      ExceptionsHandled:
-        "@Value": False
-      InstanceTypeName:
-        "@Value": OpenSpan.Automation.EntryPoint
-      InstanceUniqueId:
-        "@Value": "Automator-8D71746ECDD2F90\\EntryPoint-8D71746EF2C24D4"
-      MemberDetails:
-        "@Value": .Run
-      MethodName:
-        "@Value": _EntryPointExecute
-      Removing:
-        "@Value": False
-      Sensitive:
-        "@Value": False
-        "@Extended": True
-      UseAlias:
-        "@Value": True
-      Content[2]:
-        - "@Name": Controls
-          Items:
-            OpenSpan.Automation.HiddenTypeProxy[2]{"@Name","@Id",AliasName{"@Value"},Parent{"@Value","@Name"},ProxiedTypeName{"@Value"},Scope{"@Value","@Extended"},Sensitive{"@Value","@Extended"},UseAlias{"@Value"},Content{"@Name",Items{OpenSpan.DynamicMembers.DynamicPropertyInfo{"@dynamicType","@name","@canRead","@canWrite","@type","@aliasName","@shouldSerialize","@visibility","@source","@blockTypeName","@tag"}}}}:
-              HiddenTypeProx1,HiddenTypeProx1-8DC7A556B691428,ErrCode,ComponentReference,entryPoint1,"System.String, mscorlib",Local,True,False,True,True,DynamicMembers,Property,Instance,True,True,System.String,Instance,False,AlwaysHidden,"","",""
-              HiddenTypeProx2,HiddenTypeProx2-8DC7A556B695F01,ErrDetail,ComponentReference,entryPoint1,"System.String, mscorlib",Local,True,False,True,True,DynamicMembers,Property,Instance,True,True,System.String,Instance,False,AlwaysHidden,"","",""
-        - "@Name": DynamicMembers
-          Items:
-            OpenSpan.DynamicMembers.DynamicPropertyInfo[3]{"@dynamicType","@name","@canRead","@canWrite","@type","@aliasName","@shouldSerialize","@visibility","@source","@blockTypeName","@tag"}:
-              Property,Result,True,True,System.Void,Result,False,AlwaysHidden,"","",""
-              Property,param1,True,True,System.String,ErrCode,False,DefaultOn,"","",""
-              Property,param2,True,True,System.String,ErrDetail,False,DefaultOn,"","",""
-    OpenSpan.Automation.ExitPoint[2]:
-      - "@Name": exitPoint1
-        "@Id": ExitPoint-8D71746EFE5593C
-        ComponentName:
-          "@Value": Run
-        DisplayName:
-          "@Value": Success
-        EntryPoint:
-          "@Value": ComponentReference
-          "@Name": entryPoint1
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.EntryPoint
-        InstanceUniqueId:
-          "@Value": "Automator-8D71746ECDD2F90\\EntryPoint-8D71746EF2C24D4"
-        MemberDetails:
-          "@Value": .Success
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        Content:
-          "@Name": DynamicMembers
-          Items:
-            OpenSpan.DynamicMembers.DynamicPropertyInfo[3]{"@dynamicType","@name","@canRead","@canWrite","@type","@aliasName","@shouldSerialize","@visibility","@source","@blockTypeName","@tag"}:
-              Property,Result,True,True,System.Void,Result,False,DefaultOn,"","",""
-              Property,param1,True,True,System.String,ErrCode,False,AlwaysHidden,"","",""
-              Property,param2,True,True,System.String,ErrDetail,False,AlwaysHidden,"","",""
-      - "@Name": exitPoint2
-        "@Id": ExitPoint-8D71746F09C7F6C
-        ComponentName:
-          "@Value": Run
-        DisplayName:
-          "@Value": Failure
-        EntryPoint:
-          "@Value": ComponentReference
-          "@Name": entryPoint1
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.EntryPoint
-        InstanceUniqueId:
-          "@Value": "Automator-8D71746ECDD2F90\\EntryPoint-8D71746EF2C24D4"
-        MemberDetails:
-          "@Value": .Failure
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        Content:
-          "@Name": DynamicMembers
-          Items:
-            OpenSpan.DynamicMembers.DynamicPropertyInfo[3]{"@dynamicType","@name","@canRead","@canWrite","@type","@aliasName","@shouldSerialize","@visibility","@source","@blockTypeName","@tag"}:
-              Property,Result,True,True,System.Void,Result,False,DefaultOn,"","",""
-              Property,param1,True,True,System.String,ErrCode,False,AlwaysHidden,"","",""
-              Property,param2,True,True,System.String,ErrDetail,False,AlwaysHidden,"","",""
-    OpenSpan.Automation.LabelHost[2]:
-      - "@Name": labelHost1
-        "@Id": LabelHost-8D71746FCDFE942
-        AliasName:
-          "@Value": Success
-        ComponentName:
-          "@Value": Success
-        DisplayName:
-          "@Value": Success
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.LabelHost
-        InstanceUniqueId:
-          "@Value": "Automator-8D71746ECDD2F90\\LabelHost-8D71746FCDFE942"
-        LabelName:
-          "@Value": Success
-        MemberDetails:
-          "@Value": .Success
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        UseAlias:
-          "@Value": True
-        Content:
-          "@Name": DynamicMembers
-          Items:
-            OpenSpan.DynamicMembers.DynamicMethodInfo:
-              "@dynamicType": Method
-              "@name": GoToLabel
-              "@aliasName": GoToLabel
-              "@visibility": AlwaysHidden
-              "@source": ""
-              "@blockTypeName": ""
-              "@returnType": System.Void
-      - "@Name": labelHost2
-        "@Id": LabelHost-8D7174758CA95C3
-        AliasName:
-          "@Value": Failure
-        ComponentName:
-          "@Value": Failure
-        DisplayName:
-          "@Value": Failure
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.LabelHost
-        InstanceUniqueId:
-          "@Value": "Automator-8D71746ECDD2F90\\LabelHost-8D7174758CA95C3"
-        LabelName:
-          "@Value": Failure
-        MemberDetails:
-          "@Value": .Failure
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        UseAlias:
-          "@Value": True
-        Content[2]:
-          - "@Name": Controls
-            Items:
-              OpenSpan.Automation.HiddenTypeProxy[2]{"@Name","@Id",AliasName{"@Value"},Parent{"@Value","@Name"},ProxiedTypeName{"@Value"},Scope{"@Value","@Extended"},Sensitive{"@Value","@Extended"},UseAlias{"@Value"},Content{"@Name",Items{OpenSpan.DynamicMembers.DynamicPropertyInfo{"@dynamicType","@name","@canRead","@canWrite","@type","@aliasName","@shouldSerialize","@visibility","@source","@blockTypeName","@tag"}}}}:
-                HiddenTypeProxy3,HiddenTypeProxy3-8DC7A556C6533E1,ErrCode,ComponentReference,labelHost2,"System.String, mscorlib",Local,True,False,True,True,DynamicMembers,Property,Instance,True,True,System.String,Instance,False,AlwaysHidden,"","",""
-                HiddenTypeProxy4,HiddenTypeProxy4-8DC7A556C655B07,ErrDetail,ComponentReference,labelHost2,"System.String, mscorlib",Local,True,False,True,True,DynamicMembers,Property,Instance,True,True,System.String,Instance,False,AlwaysHidden,"","",""
-          - "@Name": DynamicMembers
-            Items:
-              OpenSpan.DynamicMembers.DynamicPropertyInfo[2]{"@dynamicType","@name","@canRead","@canWrite","@type","@aliasName","@shouldSerialize","@visibility","@source","@blockTypeName","@tag"}:
-                Property,_param1,True,True,System.String,ErrCode,False,AlwaysHidden,"","",""
-                Property,_param2,True,True,System.String,ErrDetail,False,AlwaysHidden,"","",""
-              OpenSpan.DynamicMembers.DynamicMethodInfo:
-                "@dynamicType": Method
-                "@name": GoToLabel
-                "@aliasName": GoToLabel
-                "@visibility": AlwaysHidden
-                "@source": ""
-                "@blockTypeName": ""
-                "@returnType": System.Void
-                param[2]{"@name","@aliasName","@paramType","@isIn","@isOut","@position"}:
-                  _param1,ErrCode,System.String,True,False,"0"
-                  _param2,ErrDetail,System.String,True,False,"1"
-    OpenSpan.Automation.ConnectableMethod[5]:
-      - "@Name": connectableMethod1
-        "@Id": ConnectableMethod-8D7174705CB7C97
-        ComponentName:
-          "@Value": RA_Common
-        DisplayName:
-          "@Value": Metric_LogProcessStart
-        EntryPointAutomationId:
-          "@Value": Automator-8D6811F9CC7BC39
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.AutomatorSet
-        InstanceUniqueId:
-          "@Value": AutomationSet-8DC74F03E74FBD1
-        MemberDetails:
-          "@Value": .Metric_LogProcessStart() Method
-        ParamsLength:
-          "@Value": "0"
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        SerializedParamsDefaultValues:
-          "@Value": ""
-        Content[2]:
-          - "@Name": DynamicMembers
-            Items:
-              OpenSpan.DynamicMembers.DynamicPropertyInfo:
-                "@dynamicType": Property
-                "@name": Result
-                "@canRead": True
-                "@canWrite": False
-                "@type": System.Int32
-                "@aliasName": Result
-                "@shouldSerialize": False
-                "@visibility": DefaultOn
-                "@source": ""
-                "@blockTypeName": ""
-                "@tag": ""
-          - "@Name": MemberPrototypes
-            Items:
-              OpenSpan.Automation.MemberPrototype:
-                MemberName:
-                  "@Value": Metric_LogProcessStart
-                MemberType:
-                  "@Value": Method
-                TypeName:
-                  "@Value": System.Int32
-                Content:
-                  "@Name": Signature
-                  OpenSpan.Automation.MethodSignature:
-                    ReturnType:
-                      "@Value": System.Int32
-                    Content:
-                      "@Name": ParameterPrototype
-                      Items:
-                        OpenSpan.Automation.ParameterPrototype[6]{CanRead{"@Value"},CanWrite{"@Value"},DefaultSet{"@Value"},IsThis{"@Value"},ParamName{"@Value"},Position{"@Value"},TypeName{"@Value"}}:
-                          False,True,False,False,_param3,"0",System.Int32
-                          False,True,False,False,_param4,"1",System.String
-                          False,True,False,False,_param5,"2",System.String
-                          True,False,False,False,param1,"3",System.String
-                          True,False,False,False,param2,"4",System.String
-                          True,False,False,False,_param1,"5",System.Boolean
-      - "@Name": connectableMethod2
-        "@Id": ConnectableMethod-8D7174706FED323
-        ComponentName:
-          "@Value": RAC_API_MF_LogProcessAction
-        DisplayName:
-          "@Value": Run
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.Automator
-        InstanceUniqueId:
-          "@Value": Automator-8D681E16981A44C
-        MemberDetails:
-          "@Value": .Run() Method
-        ParamsLength:
-          "@Value": "0"
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        SerializedParamsDefaultValues:
-          "@Value": ""
-        Content:
-          "@Name": MemberPrototypes
-          Items:
-            OpenSpan.Automation.MemberPrototype:
-              MemberName:
-                "@Value": _EntryPointExecute
-              MemberType:
-                "@Value": Method
-              TypeName:
-                "@Value": System.Void
-              Content:
-                "@Name": Signature
-                OpenSpan.Automation.MethodSignature:
-                  ReturnType:
-                    "@Value": System.Void
-                  Content:
-                    "@Name": ParameterPrototype
-                    Items:
-                      OpenSpan.Automation.ParameterPrototype[6]:
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": True
-                          DefaultValue:
-                            "@Value": ""
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param1
-                          Position:
-                            "@Value": "0"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param2
-                          Position:
-                            "@Value": "1"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param3
-                          Position:
-                            "@Value": "2"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": param1
-                          Position:
-                            "@Value": "3"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": param2
-                          Position:
-                            "@Value": "4"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param4
-                          Position:
-                            "@Value": "5"
-                          TypeName:
-                            "@Value": System.Boolean
-      - "@Name": connectableMethod3
-        "@Id": ConnectableMethod-8D717470851D33D
-        ComponentName:
-          "@Value": RAC_API_MF_LogProcessAction
-        DisplayName:
-          "@Value": Run
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.Automator
-        InstanceUniqueId:
-          "@Value": Automator-8D681E16981A44C
-        MemberDetails:
-          "@Value": .Run() Method
-        ParamsLength:
-          "@Value": "0"
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        SerializedParamsDefaultValues:
-          "@Value": ""
-        Content:
-          "@Name": MemberPrototypes
-          Items:
-            OpenSpan.Automation.MemberPrototype:
-              MemberName:
-                "@Value": _EntryPointExecute
-              MemberType:
-                "@Value": Method
-              TypeName:
-                "@Value": System.Void
-              Content:
-                "@Name": Signature
-                OpenSpan.Automation.MethodSignature:
-                  ReturnType:
-                    "@Value": System.Void
-                  Content:
-                    "@Name": ParameterPrototype
-                    Items:
-                      OpenSpan.Automation.ParameterPrototype[6]{CanRead{"@Value"},CanWrite{"@Value"},DefaultSet{"@Value"},IsThis{"@Value"},ParamName{"@Value"},Position{"@Value"},TypeName{"@Value"}}:
-                        False,True,False,False,_param1,"0",System.String
-                        False,True,False,False,_param2,"1",System.String
-                        False,True,False,False,_param3,"2",System.String
-                        True,False,False,False,param1,"3",System.String
-                        True,False,False,False,param2,"4",System.String
-                        True,False,False,False,_param4,"5",System.Boolean
-      - "@Name": connectableMethod4
-        "@Id": ConnectableMethod-8D71747860B74FA
-        ComponentName:
-          "@Value": RAC_API_MF_LogProcessAction
-        DisplayName:
-          "@Value": Run
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.Automator
-        InstanceUniqueId:
-          "@Value": Automator-8D681E16981A44C
-        MemberDetails:
-          "@Value": .Run() Method
-        ParamsLength:
-          "@Value": "0"
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        SerializedParamsDefaultValues:
-          "@Value": ""
-        Content:
-          "@Name": MemberPrototypes
-          Items:
-            OpenSpan.Automation.MemberPrototype:
-              MemberName:
-                "@Value": _EntryPointExecute
-              MemberType:
-                "@Value": Method
-              TypeName:
-                "@Value": System.Void
-              Content:
-                "@Name": Signature
-                OpenSpan.Automation.MethodSignature:
-                  ReturnType:
-                    "@Value": System.Void
-                  Content:
-                    "@Name": ParameterPrototype
-                    Items:
-                      OpenSpan.Automation.ParameterPrototype[6]:
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": True
-                          DefaultValue:
-                            "@Value": ""
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param1
-                          Position:
-                            "@Value": "0"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param2
-                          Position:
-                            "@Value": "1"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param3
-                          Position:
-                            "@Value": "2"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": param1
-                          Position:
-                            "@Value": "3"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": param2
-                          Position:
-                            "@Value": "4"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param4
-                          Position:
-                            "@Value": "5"
-                          TypeName:
-                            "@Value": System.Boolean
-      - "@Name": connectableMethod5
-        "@Id": ConnectableMethod-8D71747A7BF6FEC
-        ComponentName:
-          "@Value": RAC_API_MF_LogProcessAction
-        DisplayName:
-          "@Value": Run
-        ExceptionsHandled:
-          "@Value": False
-        InstanceTypeName:
-          "@Value": OpenSpan.Automation.Automator
-        InstanceUniqueId:
-          "@Value": Automator-8D681E16981A44C
-        MemberDetails:
-          "@Value": .Run() Method
-        ParamsLength:
-          "@Value": "0"
-        Sensitive:
-          "@Value": False
-          "@Extended": True
-        SerializedParamsDefaultValues:
-          "@Value": ""
-        Content:
-          "@Name": MemberPrototypes
-          Items:
-            OpenSpan.Automation.MemberPrototype:
-              MemberName:
-                "@Value": _EntryPointExecute
-              MemberType:
-                "@Value": Method
-              TypeName:
-                "@Value": System.Void
-              Content:
-                "@Name": Signature
-                OpenSpan.Automation.MethodSignature:
-                  ReturnType:
-                    "@Value": System.Void
-                  Content:
-                    "@Name": ParameterPrototype
-                    Items:
-                      OpenSpan.Automation.ParameterPrototype[6]:
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": True
-                          DefaultValue:
-                            "@Value": ""
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param1
-                          Position:
-                            "@Value": "0"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param2
-                          Position:
-                            "@Value": "1"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": False
-                          CanWrite:
-                            "@Value": True
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param3
-                          Position:
-                            "@Value": "2"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": param1
-                          Position:
-                            "@Value": "3"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": param2
-                          Position:
-                            "@Value": "4"
-                          TypeName:
-                            "@Value": System.String
-                        - CanRead:
-                            "@Value": True
-                          CanWrite:
-                            "@Value": False
-                          DefaultSet:
-                            "@Value": False
-                          IsThis:
-                            "@Value": False
-                          ParamName:
-                            "@Value": _param4
-                          Position:
-                            "@Value": "5"
-                          TypeName:
-                            "@Value": System.Boolean
-    OpenSpan.Automation.ConnectableProperties[10]{"@Name","@Id",ComponentName{"@Value"},DefaultValues{"@Value"},DisplayName{"@Value"},ExceptionsHandled{"@Value"},InstanceTypeName{"@Value"},InstanceUniqueId{"@Value"},MemberDetails{"@Value"},Sensitive{"@Value","@Extended"},Content{"@Name",Items{OpenSpan.Automation.MemberPrototype{MemberName{"@Value"},MemberType{"@Value"},TypeName{"@Value"}}}}}:
-      connectableProperties1,ConnectableProperties-8D717470BBE4B2B,intActnStopID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D680357B43C55B",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties3,ConnectableProperties-8D717470DA5656D,intActnAutErrID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D6811EE56CCD09",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties2,ConnectableProperties-8D7174712BF4C6D,intProcAppShtdwn,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D681F629CA71FF",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties4,ConnectableProperties-8D71747456E1775,_intProdID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"Automator-8D71746ECDD2F90\\ConnectableVariable-8D71747455A4FC0",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties5,ConnectableProperties-8D7174750195F7B,_intProdID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"Automator-8D71746ECDD2F90\\ConnectableVariable-8D71747455A4FC0",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties6,ConnectableProperties-8D71747506B20C3,_intProdID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"Automator-8D71746ECDD2F90\\ConnectableVariable-8D71747455A4FC0",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties7,ConnectableProperties-8D7174784C2F0F2,intProcRunID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D681E12C4AB245",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties8,ConnectableProperties-8D717478A0898B2,intActnStopID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D680357B43C55B",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties9,ConnectableProperties-8D717479650F296,intActnStopID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D680357B43C55B",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-      connectableProperties10,ConnectableProperties-8D7174797FE190E,intProcRunID,"",Properties,False,Pega.Controls.Variables.IntegerVariable,"GlobalContainer-8DC7A556601B888\\ConnectableVariable-8D681E12C4AB245",.Value Property,False,True,MemberPrototypes,Value,Property,System.Int32
-    OpenSpan.Automation.JumpHost:
-      "@Name": jumpHost1
-      "@Id": JumpHost-8D7174720A453AC
-      ComponentName:
-        "@Value": Success
-      DisplayName:
-        "@Value": Jump To Success
-      ExceptionsHandled:
-        "@Value": False
-      InstanceTypeName:
-        "@Value": OpenSpan.Automation.LabelHost
-      InstanceUniqueId:
-        "@Value": "Automator-8D71746ECDD2F90\\LabelHost-8D71746FCDFE942"
-      MemberDetails:
-        "@Value": " . Jump To Success - Success"
-      ParamsLength:
-        "@Value": "0"
-      Sensitive:
-        "@Value": False
-        "@Extended": True
-      SerializedParamsDefaultValues:
-        "@Value": ""
-      Content:
-        "@Name": MemberPrototypes
-        Items:
-          OpenSpan.Automation.MemberPrototype:
-            MemberName:
-              "@Value": GoToLabel
-            MemberType:
-              "@Value": Method
-            TypeName:
-              "@Value": System.Void
-            Content:
-              "@Name": Signature
-              OpenSpan.Automation.MethodSignature:
-                ReturnType:
-                  "@Value": System.Void
-    Pega.Controls.Variables.IntegerVariable:
-      "@Name": _intProdID
-      "@Id": ConnectableVariable-8D71747455A4FC0
-      Scope:
-        "@Value": Local
-        "@Extended": True
-      Sensitive:
-        "@Value": False
-        "@Extended": True
-      Value:
-        "@Value": z/8=
-        "@Encryption": "1"
+tag: OpenSpanDesignDocument
+attributes:
+  Version: "25.1"
+  Serializer: "2.0"
+  Culture: en-US
+text: "\n  "
+tail: null
+children[2]:
+  - tag: ComponentInfo
+    attributes:
+    text: "\n    "
+    tail: "\n  "
+    children[8]:
+      - tag: Type
+        attributes:
+          Value: OpenSpan.Automation.Automator
+        text: null
+        tail: "\n    "
+        children: []
+      - tag: Assembly
+        attributes:
+          Value: OpenSpan.Automation
+        text: null
+        tail: "\n    "
+        children: []
+      - tag: Dependencies
+        attributes:
+        text: "\n      "
+        tail: "\n    "
+        children[1]:
+          - tag: Dependency
+            attributes:
+              Id: WindowsAdapter-8DE813C448602A0
+              IsUsed: True
+            text: null
+            tail: "\n    "
+            children: []
+      - tag: AssemblyReferences
+        attributes:
+        text: "\n      "
+        tail: "\n    "
+        children[4]:
+          - tag: Assembly
+            attributes:
+              Value: System
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Assembly
+            attributes:
+              Value: OpenSpan
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Assembly
+            attributes:
+              Value: OpenSpan.Adapters.Windows
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Assembly
+            attributes:
+              Value: OpenSpan.Automation
+            text: null
+            tail: "\n    "
+            children: []
+      - tag: DynamicAssemblyReferences
+        attributes:
+        text: null
+        tail: "\n    "
+        children: []
+      - tag: FileReferences
+        attributes:
+        text: null
+        tail: "\n    "
+        children: []
+      - tag: StartAtRuntime
+        attributes:
+          Value: False
+        text: null
+        tail: "\n    "
+        children: []
+      - tag: External
+        attributes:
+          Value: True
+        text: null
+        tail: "\n  "
+        children: []
+  - tag: Component
+    attributes:
+      Version: "1.0"
+    text: "\n    "
+    tail: "\n"
+    children[10]:
+      - tag: OpenSpan.Automation.Automator
+        attributes:
+          Name: StartApp
+          Id: Automator-8DE813C448AAA68
+        text: "\n      "
+        tail: "\n    "
+        children[4]:
+          - tag: AutomationDocument
+            attributes:
+            text: "\n        "
+            tail: "\n      "
+            children[5]:
+              - tag: Size
+                attributes:
+                  Value: "5007, 5004"
+                text: null
+                tail: "\n        "
+                children: []
+              - tag: Objects
+                attributes:
+                text: "\n          "
+                tail: "\n        "
+                children[9]:
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[4]:
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\EntryPoint-8DA4A1A6F4A6F68"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "80"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "220"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "1"
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[10]:
+                      - tag: DisplayName
+                        attributes:
+                          Value: Properties
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\ConnectableProperties-8DA4A1A746DFACB"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "2"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "220"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "220"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Collapsed
+                        attributes:
+                          Value: False
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: WillExecute
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: InstanceName
+                        attributes:
+                          Value: BankerInsight
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Fittings
+                        attributes:
+                        text: "\n              "
+                        tail: "\n            "
+                        children[1]:
+                          - tag: IsRunning
+                            attributes:
+                              Collapsed: False
+                              ActualText: IsRunning
+                            text: null
+                            tail: "\n            "
+                            children: []
+                      - tag: OverriddenIds
+                        attributes:
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[4]:
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "80"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "640"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "4"
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[9]:
+                      - tag: DisplayName
+                        attributes:
+                          Value: BankerInsight.Started
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "8"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "420"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "320"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Collapsed
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: WillExecute
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: InstanceName
+                        attributes:
+                          Value: WaitForEvent
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: OverriddenIds
+                        attributes:
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[9]:
+                      - tag: DisplayName
+                        attributes:
+                          Value: Start
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\ConnectableMethod-8DA4A1B9C17EC60"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "12"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "660"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "320"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Collapsed
+                        attributes:
+                          Value: False
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: WillExecute
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: InstanceName
+                        attributes:
+                          Value: BankerInsight
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: OverriddenIds
+                        attributes:
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                      type: OpenSpan.Automation.Design.ConnectionBlocks.MultiExitPointBlock
+                    text: "\n            "
+                    tail: "\n          "
+                    children[6]:
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\ExitPoint-8DA4A1BB700CDF9"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "280"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "640"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "18"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Title
+                        attributes:
+                          Value: Exit
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: EventName
+                        attributes:
+                          Value: ""
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[9]:
+                      - tag: DisplayName
+                        attributes:
+                          Value: GoToLabel
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F53C3B46C"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "21"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "660"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "540"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Collapsed
+                        attributes:
+                          Value: False
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: WillExecute
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: InstanceName
+                        attributes:
+                          Value: Jump To Exit
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: OverriddenIds
+                        attributes:
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n          "
+                    children[9]:
+                      - tag: DisplayName
+                        attributes:
+                          Value: GoToLabel
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F5AEE7EB0"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "22"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "660"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "420"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Collapsed
+                        attributes:
+                          Value: False
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: WillExecute
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: InstanceName
+                        attributes:
+                          Value: Jump To Exit
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: OverriddenIds
+                        attributes:
+                        text: null
+                        tail: "\n          "
+                        children: []
+                  - tag: ConnectionBlock
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[9]:
+                      - tag: DisplayName
+                        attributes:
+                          Value: GoToLabel
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ConnectableUniqueId
+                        attributes:
+                          Value: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F67818AE5"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: PartID
+                        attributes:
+                          Value: "25"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Left
+                        attributes:
+                          Value: "420"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Top
+                        attributes:
+                          Value: "220"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Collapsed
+                        attributes:
+                          Value: False
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: WillExecute
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: InstanceName
+                        attributes:
+                          Value: Jump To Exit
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: OverriddenIds
+                        attributes:
+                        text: null
+                        tail: "\n          "
+                        children: []
+              - tag: Links
+                attributes:
+                text: "\n          "
+                tail: "\n        "
+                children[8]:
+                  - tag: Link
+                    attributes:
+                      PartID: "3"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "1"
+                          PortName: Complete
+                          PortType: Event
+                          ConnectableId: "Automator-8DE813C448AAA68\\EntryPoint-8DA4A1A6F4A6F68"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\EntryPoint-8DA4A1A6F4A6F68"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "2"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\ConnectableProperties-8DA4A1A746DFACB"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\ConnectableProperties-8DA4A1A746DFACB"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "122, 172"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "132, 172"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "140, 172"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "140, 195"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "180, 195"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "190, 195"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: DecisionEventLink
+                    attributes:
+                      PartID: "11"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "2"
+                          ParentMemberName: IsRunning
+                          DecisionValue: False
+                          ConnectableId: "Automator-8DE813C448AAA68\\ConnectableProperties-8DA4A1A746DFACB"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "8"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "332, 249"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "342, 249"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "348, 249"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "348, 285"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "390, 285"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "400, 285"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: Link
+                    attributes:
+                      PartID: "13"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "8"
+                          PortName: StartingSetup
+                          PortType: Event
+                          ConnectableId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "12"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\ConnectableMethod-8DA4A1B9C17EC60"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\ConnectableMethod-8DA4A1B9C17EC60"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "582, 305"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "592, 305"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "596, 305"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "596, 265"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "640, 265"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "650, 265"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: Link
+                    attributes:
+                      PartID: "19"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "4"
+                          PortName: Complete
+                          PortType: Event
+                          ConnectableId: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "18"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\ExitPoint-8DA4A1BB700CDF9"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\ExitPoint-8DA4A1BB700CDF9"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "143, 492"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "153, 492"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "153, 491"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "153, 491"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "180, 491"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "190, 491"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: Link
+                    attributes:
+                      PartID: "20"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "4"
+                          PortName: _param1
+                          PortType: Property
+                          ConnectableId: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+                          MemberComponentId: EMPTY
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "18"
+                          PortName: Result
+                          PortType: Property
+                          ConnectableId: "Automator-8DE813C448AAA68\\ExitPoint-8DA4A1BB700CDF9"
+                          MemberComponentId: EMPTY
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "143, 522"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "153, 522"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "153, 521"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "153, 521"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "179, 521"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "189, 521"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: Link
+                    attributes:
+                      PartID: "23"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "8"
+                          PortName: Raised
+                          PortType: Event
+                          ConnectableId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "22"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F5AEE7EB0"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F5AEE7EB0"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "582, 325"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "592, 325"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "592, 322"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "592, 322"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "640, 322"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "650, 322"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: Link
+                    attributes:
+                      PartID: "24"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n          "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "8"
+                          PortName: TimedOut
+                          PortType: Event
+                          ConnectableId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\WaitForEvent-8DA4A1B8AF3F272"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "21"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F53C3B46C"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F53C3B46C"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "582, 346"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "592, 346"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "596, 346"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "596, 402"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "640, 402"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "650, 402"
+                            text: null
+                            tail: "\n            "
+                            children: []
+                  - tag: DecisionEventLink
+                    attributes:
+                      PartID: "26"
+                      Sensitive: False
+                      Asynchronous: False
+                      LogBeforeExecution: ""
+                      LogAfterExecution: ""
+                    text: "\n            "
+                    tail: "\n        "
+                    children[3]:
+                      - tag: From
+                        attributes:
+                          PartID: "2"
+                          ParentMemberName: IsRunning
+                          DecisionValue: True
+                          ConnectableId: "Automator-8DE813C448AAA68\\ConnectableProperties-8DA4A1A746DFACB"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: To
+                        attributes:
+                          PartID: "25"
+                          PortName: DoWork
+                          PortType: Method
+                          ConnectableId: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F67818AE5"
+                          MemberComponentId: "Automator-8DE813C448AAA68\\JumpHost-8DA4A1F67818AE5"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: LinkPoints
+                        attributes:
+                        text: "\n              "
+                        tail: "\n          "
+                        children[6]:
+                          - tag: Point
+                            attributes:
+                              value: "332, 231"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "342, 231"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "348, 231"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "348, 172"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "390, 172"
+                            text: null
+                            tail: "\n              "
+                            children: []
+                          - tag: Point
+                            attributes:
+                              value: "400, 172"
+                            text: null
+                            tail: "\n            "
+                            children: []
+              - tag: Comments
+                attributes:
+                text: null
+                tail: "\n        "
+                children: []
+              - tag: SubGraphs
+                attributes:
+                text: null
+                tail: "\n      "
+                children: []
+          - tag: GridSize
+            attributes:
+              Value: "10, 10"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: IsExternal
+            attributes:
+              Value: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: DynamicMembers
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.DynamicMembers.DynamicMethodInfo
+                    attributes:
+                      dynamicType: Method
+                      name: _EntryPointExecute
+                      aliasName: Run
+                      visibility: DefaultOn
+                      source: ""
+                      blockTypeName: OpenSpan.Automation.Design.ConnectionBlocks.EntryPointExecuteBlock
+                      returnType: System.Boolean
+                    text: null
+                    tail: "\n        "
+                    children: []
+      - tag: OpenSpan.Automation.EntryPoint
+        attributes:
+          Name: EntryPoint1
+          Id: EntryPoint-8DA4A1A6F4A6F68
+        text: "\n      "
+        tail: "\n    "
+        children[13]:
+          - tag: AliasName
+            attributes:
+              Value: Run
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ComponentName
+            attributes:
+              Value: Run
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: Run
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Automation.EntryPoint
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: "Automator-8DE813C448AAA68\\EntryPoint-8DA4A1A6F4A6F68"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: Run
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MethodName
+            attributes:
+              Value: _EntryPointExecute
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Removing
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: UseAlias
+            attributes:
+              Value: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: Controls
+            text: "\n        "
+            tail: "\n      "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.HiddenTypeProxy
+                    attributes:
+                      Name: HiddenTypeProxy2
+                      Id: HiddenTypeProxy-8DA4A1BBB01FDC4
+                    text: "\n            "
+                    tail: "\n        "
+                    children[7]:
+                      - tag: AliasName
+                        attributes:
+                          Value: Result
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Parent
+                        attributes:
+                          Value: ComponentReference
+                          Name: EntryPoint1
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ProxiedTypeName
+                        attributes:
+                          Value: "System.Boolean, mscorlib"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Scope
+                        attributes:
+                          Value: Local
+                          Extended: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Sensitive
+                        attributes:
+                          Value: False
+                          Extended: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: UseAlias
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Content
+                        attributes:
+                          Name: DynamicMembers
+                        text: "\n              "
+                        tail: "\n          "
+                        children[1]:
+                          - tag: Items
+                            attributes:
+                            text: "\n                "
+                            tail: "\n            "
+                            children[1]:
+                              - tag: OpenSpan.DynamicMembers.DynamicPropertyInfo
+                                attributes:
+                                  dynamicType: Property
+                                  name: Instance
+                                  canRead: True
+                                  canWrite: True
+                                  type: System.Boolean
+                                  aliasName: Instance
+                                  shouldSerialize: False
+                                  visibility: AlwaysHidden
+                                  source: ""
+                                  blockTypeName: ""
+                                  tag: ""
+                                text: null
+                                tail: "\n              "
+                                children: []
+          - tag: Content
+            attributes:
+              Name: DynamicMembers
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.DynamicMembers.DynamicPropertyInfo
+                    attributes:
+                      dynamicType: Property
+                      name: Result
+                      canRead: True
+                      canWrite: True
+                      type: System.Boolean
+                      aliasName: Result
+                      shouldSerialize: False
+                      visibility: AlwaysHidden
+                      source: ""
+                      blockTypeName: ""
+                      tag: ""
+                    text: null
+                    tail: "\n        "
+                    children: []
+      - tag: OpenSpan.Automation.ConnectableProperties
+        attributes:
+          Name: ConnectableProperti1
+          Id: ConnectableProperties-8DA4A1A746DFACB
+        text: "\n      "
+        tail: "\n    "
+        children[9]:
+          - tag: ComponentName
+            attributes:
+              Value: BankerInsight
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DefaultValues
+            attributes:
+              Value: ""
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: Properties
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Adapters.Windows.WindowsAdapter
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: WindowsAdapter-8DE813C448602A0
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: .IsRunning Property
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: MemberPrototypes
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.MemberPrototype
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[3]:
+                      - tag: MemberName
+                        attributes:
+                          Value: IsRunning
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: MemberType
+                        attributes:
+                          Value: Property
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: TypeName
+                        attributes:
+                          Value: System.Boolean
+                        text: null
+                        tail: "\n          "
+                        children: []
+      - tag: OpenSpan.Automation.LabelHost
+        attributes:
+          Name: LabelHost1
+          Id: LabelHost-8DA4A1A9D20FE99
+        text: "\n      "
+        tail: "\n    "
+        children[12]:
+          - tag: AliasName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ComponentName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Automation.LabelHost
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: LabelName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: " . Exit"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: UseAlias
+            attributes:
+              Value: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: Controls
+            text: "\n        "
+            tail: "\n      "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.HiddenTypeProxy
+                    attributes:
+                      Name: HiddenTypeProxy1
+                      Id: HiddenTypeProxy-8DA4A1B3D14A0B8
+                    text: "\n            "
+                    tail: "\n        "
+                    children[7]:
+                      - tag: AliasName
+                        attributes:
+                          Value: result
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Parent
+                        attributes:
+                          Value: ComponentReference
+                          Name: LabelHost1
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: ProxiedTypeName
+                        attributes:
+                          Value: "System.Boolean, mscorlib"
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Scope
+                        attributes:
+                          Value: Local
+                          Extended: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Sensitive
+                        attributes:
+                          Value: False
+                          Extended: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: UseAlias
+                        attributes:
+                          Value: True
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Content
+                        attributes:
+                          Name: DynamicMembers
+                        text: "\n              "
+                        tail: "\n          "
+                        children[1]:
+                          - tag: Items
+                            attributes:
+                            text: "\n                "
+                            tail: "\n            "
+                            children[1]:
+                              - tag: OpenSpan.DynamicMembers.DynamicPropertyInfo
+                                attributes:
+                                  dynamicType: Property
+                                  name: Instance
+                                  canRead: True
+                                  canWrite: True
+                                  type: System.Boolean
+                                  aliasName: Instance
+                                  shouldSerialize: False
+                                  visibility: AlwaysHidden
+                                  source: ""
+                                  blockTypeName: ""
+                                  tag: ""
+                                text: null
+                                tail: "\n              "
+                                children: []
+          - tag: Content
+            attributes:
+              Name: DynamicMembers
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[2]:
+                  - tag: OpenSpan.DynamicMembers.DynamicPropertyInfo
+                    attributes:
+                      dynamicType: Property
+                      name: _param1
+                      canRead: True
+                      canWrite: True
+                      type: System.Boolean
+                      aliasName: result
+                      shouldSerialize: False
+                      visibility: AlwaysHidden
+                      source: ""
+                      blockTypeName: ""
+                      tag: ""
+                    text: null
+                    tail: "\n          "
+                    children: []
+                  - tag: OpenSpan.DynamicMembers.DynamicMethodInfo
+                    attributes:
+                      dynamicType: Method
+                      name: GoToLabel
+                      aliasName: GoToLabel
+                      visibility: AlwaysHidden
+                      source: ""
+                      blockTypeName: ""
+                      returnType: System.Void
+                    text: "\n            "
+                    tail: "\n        "
+                    children[1]:
+                      - tag: param
+                        attributes:
+                          name: _param1
+                          aliasName: result
+                          paramType: System.Boolean
+                          isIn: True
+                          isOut: False
+                          position: "0"
+                        text: null
+                        tail: "\n          "
+                        children: []
+      - tag: OpenSpan.Automation.WaitForEvent
+        attributes:
+          Name: WaitForEvent1
+          Id: WaitForEvent-8DA4A1B8AF3F272
+        text: "\n      "
+        tail: "\n    "
+        children[8]:
+          - tag: ComponentName
+            attributes:
+              Value: BankerInsight
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: BankerInsight.Started
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Adapters.Windows.WindowsAdapter
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: WindowsAdapter-8DE813C448602A0
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: .Started Event
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: MemberPrototypes
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.MemberPrototype
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[3]:
+                      - tag: MemberName
+                        attributes:
+                          Value: Started
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: MemberType
+                        attributes:
+                          Value: Event
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: TypeName
+                        attributes:
+                          Value: System.EventHandler
+                        text: null
+                        tail: "\n          "
+                        children: []
+      - tag: OpenSpan.Automation.ConnectableMethod
+        attributes:
+          Name: ConnectableMethod1
+          Id: ConnectableMethod-8DA4A1B9C17EC60
+        text: "\n      "
+        tail: "\n    "
+        children[10]:
+          - tag: ComponentName
+            attributes:
+              Value: BankerInsight
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: Start
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Adapters.Windows.WindowsAdapter
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: WindowsAdapter-8DE813C448602A0
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: .Start() Method
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ParamsLength
+            attributes:
+              Value: "0"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: SerializedParamsDefaultValues
+            attributes:
+              Value: ""
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: MemberPrototypes
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.MemberPrototype
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[4]:
+                      - tag: MemberName
+                        attributes:
+                          Value: Start
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: MemberType
+                        attributes:
+                          Value: Method
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: TypeName
+                        attributes:
+                          Value: System.Void
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Content
+                        attributes:
+                          Name: Signature
+                        text: "\n              "
+                        tail: "\n          "
+                        children[1]:
+                          - tag: OpenSpan.Automation.MethodSignature
+                            attributes:
+                            text: "\n                "
+                            tail: "\n            "
+                            children[1]:
+                              - tag: ReturnType
+                                attributes:
+                                  Value: System.Void
+                                text: null
+                                tail: "\n              "
+                                children: []
+      - tag: OpenSpan.Automation.ExitPoint
+        attributes:
+          Name: ExitPoint1
+          Id: ExitPoint-8DA4A1BB700CDF9
+        text: "\n      "
+        tail: "\n    "
+        children[9]:
+          - tag: ComponentName
+            attributes:
+              Value: Run
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: EntryPoint
+            attributes:
+              Value: ComponentReference
+              Name: EntryPoint1
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Automation.EntryPoint
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: "Automator-8DE813C448AAA68\\EntryPoint-8DA4A1A6F4A6F68"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: DynamicMembers
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.DynamicMembers.DynamicPropertyInfo
+                    attributes:
+                      dynamicType: Property
+                      name: Result
+                      canRead: True
+                      canWrite: True
+                      type: System.Boolean
+                      aliasName: Result
+                      shouldSerialize: False
+                      visibility: DefaultOn
+                      source: ""
+                      blockTypeName: ""
+                      tag: ""
+                    text: null
+                    tail: "\n        "
+                    children: []
+      - tag: OpenSpan.Automation.JumpHost
+        attributes:
+          Name: JumpHost1
+          Id: JumpHost-8DA4A1F53C3B46C
+        text: "\n      "
+        tail: "\n    "
+        children[10]:
+          - tag: ComponentName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: GoToLabel
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Automation.LabelHost
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: " . Jump To Exit - Exit"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ParamsLength
+            attributes:
+              Value: "0"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: SerializedParamsDefaultValues
+            attributes:
+              Value: ""
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: MemberPrototypes
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.MemberPrototype
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[4]:
+                      - tag: MemberName
+                        attributes:
+                          Value: GoToLabel
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: MemberType
+                        attributes:
+                          Value: Method
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: TypeName
+                        attributes:
+                          Value: System.Void
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Content
+                        attributes:
+                          Name: Signature
+                        text: "\n              "
+                        tail: "\n          "
+                        children[1]:
+                          - tag: OpenSpan.Automation.MethodSignature
+                            attributes:
+                            text: "\n                "
+                            tail: "\n            "
+                            children[2]:
+                              - tag: ReturnType
+                                attributes:
+                                  Value: System.Void
+                                text: null
+                                tail: "\n                "
+                                children: []
+                              - tag: Content
+                                attributes:
+                                  Name: ParameterPrototype
+                                text: "\n                  "
+                                tail: "\n              "
+                                children[1]:
+                                  - tag: Items
+                                    attributes:
+                                    text: "\n                    "
+                                    tail: "\n                "
+                                    children[1]:
+                                      - tag: OpenSpan.Automation.ParameterPrototype
+                                        attributes:
+                                        text: "\n                      "
+                                        tail: "\n                  "
+                                        children[8]:
+                                          - tag: CanRead
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: CanWrite
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: DefaultSet
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: DefaultValue
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: IsThis
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: ParamName
+                                            attributes:
+                                              Value: _param1
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: Position
+                                            attributes:
+                                              Value: "0"
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: TypeName
+                                            attributes:
+                                              Value: System.Boolean
+                                            text: null
+                                            tail: "\n                    "
+                                            children: []
+      - tag: OpenSpan.Automation.JumpHost
+        attributes:
+          Name: JumpHost2
+          Id: JumpHost-8DA4A1F5AEE7EB0
+        text: "\n      "
+        tail: "\n    "
+        children[10]:
+          - tag: ComponentName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: GoToLabel
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Automation.LabelHost
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: " . Jump To Exit - Exit"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ParamsLength
+            attributes:
+              Value: "0"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: SerializedParamsDefaultValues
+            attributes:
+              Value: ""
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: MemberPrototypes
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.MemberPrototype
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[4]:
+                      - tag: MemberName
+                        attributes:
+                          Value: GoToLabel
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: MemberType
+                        attributes:
+                          Value: Method
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: TypeName
+                        attributes:
+                          Value: System.Void
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Content
+                        attributes:
+                          Name: Signature
+                        text: "\n              "
+                        tail: "\n          "
+                        children[1]:
+                          - tag: OpenSpan.Automation.MethodSignature
+                            attributes:
+                            text: "\n                "
+                            tail: "\n            "
+                            children[2]:
+                              - tag: ReturnType
+                                attributes:
+                                  Value: System.Void
+                                text: null
+                                tail: "\n                "
+                                children: []
+                              - tag: Content
+                                attributes:
+                                  Name: ParameterPrototype
+                                text: "\n                  "
+                                tail: "\n              "
+                                children[1]:
+                                  - tag: Items
+                                    attributes:
+                                    text: "\n                    "
+                                    tail: "\n                "
+                                    children[1]:
+                                      - tag: OpenSpan.Automation.ParameterPrototype
+                                        attributes:
+                                        text: "\n                      "
+                                        tail: "\n                  "
+                                        children[8]:
+                                          - tag: CanRead
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: CanWrite
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: DefaultSet
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: DefaultValue
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: IsThis
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: ParamName
+                                            attributes:
+                                              Value: _param1
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: Position
+                                            attributes:
+                                              Value: "0"
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: TypeName
+                                            attributes:
+                                              Value: System.Boolean
+                                            text: null
+                                            tail: "\n                    "
+                                            children: []
+      - tag: OpenSpan.Automation.JumpHost
+        attributes:
+          Name: JumpHost3
+          Id: JumpHost-8DA4A1F67818AE5
+        text: "\n      "
+        tail: "\n  "
+        children[10]:
+          - tag: ComponentName
+            attributes:
+              Value: Exit
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: DisplayName
+            attributes:
+              Value: GoToLabel
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ExceptionsHandled
+            attributes:
+              Value: False
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceTypeName
+            attributes:
+              Value: OpenSpan.Automation.LabelHost
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: InstanceUniqueId
+            attributes:
+              Value: "Automator-8DE813C448AAA68\\LabelHost-8DA4A1A9D20FE99"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: MemberDetails
+            attributes:
+              Value: " . Jump To Exit - Exit"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: ParamsLength
+            attributes:
+              Value: "0"
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Sensitive
+            attributes:
+              Value: False
+              Extended: True
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: SerializedParamsDefaultValues
+            attributes:
+              Value: ""
+            text: null
+            tail: "\n      "
+            children: []
+          - tag: Content
+            attributes:
+              Name: MemberPrototypes
+            text: "\n        "
+            tail: "\n    "
+            children[1]:
+              - tag: Items
+                attributes:
+                text: "\n          "
+                tail: "\n      "
+                children[1]:
+                  - tag: OpenSpan.Automation.MemberPrototype
+                    attributes:
+                    text: "\n            "
+                    tail: "\n        "
+                    children[4]:
+                      - tag: MemberName
+                        attributes:
+                          Value: GoToLabel
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: MemberType
+                        attributes:
+                          Value: Method
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: TypeName
+                        attributes:
+                          Value: System.Void
+                        text: null
+                        tail: "\n            "
+                        children: []
+                      - tag: Content
+                        attributes:
+                          Name: Signature
+                        text: "\n              "
+                        tail: "\n          "
+                        children[1]:
+                          - tag: OpenSpan.Automation.MethodSignature
+                            attributes:
+                            text: "\n                "
+                            tail: "\n            "
+                            children[2]:
+                              - tag: ReturnType
+                                attributes:
+                                  Value: System.Void
+                                text: null
+                                tail: "\n                "
+                                children: []
+                              - tag: Content
+                                attributes:
+                                  Name: ParameterPrototype
+                                text: "\n                  "
+                                tail: "\n              "
+                                children[1]:
+                                  - tag: Items
+                                    attributes:
+                                    text: "\n                    "
+                                    tail: "\n                "
+                                    children[1]:
+                                      - tag: OpenSpan.Automation.ParameterPrototype
+                                        attributes:
+                                        text: "\n                      "
+                                        tail: "\n                  "
+                                        children[8]:
+                                          - tag: CanRead
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: CanWrite
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: DefaultSet
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: DefaultValue
+                                            attributes:
+                                              Value: True
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: IsThis
+                                            attributes:
+                                              Value: False
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: ParamName
+                                            attributes:
+                                              Value: _param1
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: Position
+                                            attributes:
+                                              Value: "0"
+                                            text: null
+                                            tail: "\n                      "
+                                            children: []
+                                          - tag: TypeName
+                                            attributes:
+                                              Value: System.Boolean
+                                            text: null
+                                            tail: "\n                    "
+                                            children: []
