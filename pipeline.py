@@ -9,11 +9,15 @@ from src.xml_to_json import XmlToJsonTransformer
 
 
 class Pipeline(Transformer):
-	def transform(self, content: str):
+	def transform(self, content: str) -> str:
 		"""Run the complete tokenization pipeline on content."""
+		examples_dir = Path(__file__).parent / "examples"
 		content = XmlToJsonTransformer().transform(content)
+		(examples_dir / "sample.json").write_text(content, encoding="utf-8")
 		content = JsonToToonTransformer().transform(content)
+		(examples_dir / "sample.toon").write_text(content, encoding="utf-8")
 		content = VocabularyTransformer().transform(content)
+		return content
 
 
 def main() -> None:
